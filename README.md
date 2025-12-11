@@ -1,4 +1,4 @@
-# ⭐ Agent Workflow Engine (FastAPI)
+#  Agent Workflow Engine (FastAPI)
 A clean, beginner‑friendly workflow engine built as part of the **AI Engineering Internship Backend Assignment**.  
 This project focuses on clarity, structure, and demonstrating strong backend fundamentals — exactly what the assignment expects.
 
@@ -6,11 +6,11 @@ The engine behaves like a tiny, simplified version of **LangGraph**, allowing yo
 
 No frontend.  
 No machine learning.  
-Just pure backend logic and clean system design. 🚀
+Just pure backend logic and clean system design. 
 
 ---
 
-# 1️⃣ What This Project Is About
+# 1 What This Project Is About
 
 The internship assignment requires building a workflow engine that:
 
@@ -24,9 +24,9 @@ This project implements **Option B: Summarization + Refinement**, one of the sam
 
 ---
 
-# 2️⃣ What This Engine Can Do
+# 2 What This Engine Can Do
 
-### ✔ Workflow Execution  
+### * Workflow Execution  
 Nodes = Python functions that read & modify shared state.
 
 Supports:
@@ -35,7 +35,7 @@ Supports:
 - Looping until a condition is satisfied  
 - Step‑by‑step run logs  
 
-### ✔ Tool Registry  
+### * Tool Registry  
 All workflow actions are stored like this:
 
 ```python
@@ -49,7 +49,7 @@ tools = {
 
 Nodes reference tools by **name**, making the system extremely easy to extend.
 
-### ✔ FastAPI Endpoints  
+### * FastAPI Endpoints  
 | Endpoint | Purpose |
 |---------|----------|
 | `POST /graph/create` | Create a graph workflow |
@@ -61,7 +61,7 @@ Everything is stored in memory → super lightweight and fast.
 
 ---
 
-# 3️⃣ Implemented Workflow: Option B — Summarization + Refinement
+# 3 Implemented Workflow: Option B — Summarization + Refinement
 
 The sample workflow follows these steps:
 
@@ -92,7 +92,7 @@ This demonstrates:
 
 ---
 
-# 4️⃣ Project Structure
+# 4 Project Structure
 
 ```
 app/
@@ -106,13 +106,13 @@ README.md
 
 ---
 
-# 5️⃣ How to Run This Project (VERY IMPORTANT)
+# 5 How to Run This Project (VERY IMPORTANT)
 
 This section is written with **extra clarity** so that anyone — even someone new — can run the workflow successfully.
 
 ---
 
-## ✅ Step 1: Create your virtual environment
+## * Step 1: Create your virtual environment
 ```bash
 python3 -m venv venv
 source venv/bin/activate
@@ -122,7 +122,7 @@ source venv/bin/activate
 
 ---
 
-## ✅ Step 2: Install required packages
+## * Step 2: Install required packages
 ```bash
 pip install fastapi uvicorn
 ```
@@ -131,7 +131,7 @@ These are the only dependencies needed.
 
 ---
 
-## ✅ Step 3: Start FastAPI Server
+## * Step 3: Start FastAPI Server
 ```bash
 uvicorn app.main:app --reload
 ```
@@ -143,7 +143,7 @@ Uvicorn running on http://127.0.0.1:8000
 
 ---
 
-## ✅ Step 4: Open Swagger Docs  
+## * Step 4: Open Swagger Docs  
 Go to:
 
 👉 http://127.0.0.1:8000/docs
@@ -152,13 +152,13 @@ This is where you will **interact with the workflow engine**.
 
 ---
 
-# 6️⃣ Running the Workflow (What YOU actually did!)
+# 6 Running the Workflow (What YOU actually did!)
 
 Here is exactly how the workflow can be tested — the same steps you used while running it:
 
 ---
 
-## 🔹 Step A — Fetch Example Workflow
+##  Step A — Fetch Example Workflow
 ```
 GET /graph/example
 ```
@@ -173,7 +173,7 @@ This `graph_id` is required for the next step.
 
 ---
 
-## 🔹 Step B — Execute Workflow
+##  Step B — Execute Workflow
 Use:
 
 ```
@@ -194,11 +194,11 @@ Example Body:
 
 ---
 
-## 🔹 Step C — What You Receive as Output
+##  Step C — What You Receive as Output
 
 You will get:
 
-### ✅ `final_state`  
+### * `final_state`  
 Contains:
 - chunks  
 - summaries  
@@ -206,14 +206,14 @@ Contains:
 - refined summary  
 - final summary length  
 
-### ✅ `log`  
+### * `log`  
 Every step executed with:
 - node name  
 - tool used  
 - next node  
 - state after each step  
 
-### ✅ `run_id`  
+### * `run_id`  
 Useful for checking state again via:
 
 ```
