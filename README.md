@@ -223,48 +223,6 @@ GET /graph/state/{run_id}
 This makes your workflow **fully observable**, which is exactly what the assignment expects.
 
 ---
-
-# 7️⃣ How This Project Fulfills All Assignment Requirements
-
-### ✔ Minimal Workflow Engine  
-Nodes, transitions, state mutation, branching, and looping implemented.
-
-### ✔ Tool Registry  
-Easy-to-extend dictionary-based tool system.
-
-### ✔ FastAPI Endpoints  
-Graph creation → workflow execution → state retrieval all functional.
-
-### ✔ Looping Logic  
-Workflow continues until summary fits the required character limit.
-
-### ✔ Clear Code Structure  
-Each file has a single responsibility — clean and readable.
-
-### ✔ No ML / No Frontend  
-Fully matches assignment constraints.
-
----
-
-# 🔟 Final Notes
-
-This project offers a clean and simple backend architecture that meets every requirement of the internship assignment.  
-It is easy to understand, easy to extend, and fully demonstrates:
-
-- Python async fundamentals  
-- Workflow/state management  
-- API design  
-- Looping & branching logic  
-- Logging and observability  
-
-If more time was available, extensions could include:
-- Persistent DB storage  
-- WebSocket log streaming  
-- Visual graph debugging  
-- Real summarization logic  
-
----
-
 🎉 Thank you for reviewing this project!  
 If you want to add diagrams, explanations, or GIF-based demos to this README, just ask.  
 
